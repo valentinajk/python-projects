@@ -1,0 +1,49 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+game = [rock,paper,scissors]
+my_choice = int(input("what do you choose ? type 0 for rock , 1 for paper , 2 for scissors."))
+print("your choice :")
+print(game[my_choice])
+print ("computer choice : ")
+computer_choice = random.choice(game)
+print(computer_choice)
+if my_choice == 0 and computer_choice == game[1]:
+    print("computer wins")
+elif my_choice == 0 and computer_choice == game[2]:
+    print("you win !")
+elif my_choice == 1 and computer_choice == game[0]:
+    print("you win !")
+elif my_choice == 1 and computer_choice == game[2]:
+    print("computer wins !")
+elif my_choice == 2 and computer_choice == game[0]:
+    print("computer wins")
+elif my_choice == 2 and computer_choice == game[1]:
+    print("you win!")
+elif my_choice and computer_choice:
+    print("match draw ")
